@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Work section - grid */
+
+#workGrid {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: 300px 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "showcaseProject showcaseProject"
+  "projectTwo projectThree"
+  "projectFour projectFive"
+  ;
+}
+
+#showcaseProject {
+  grid-area: showcaseProject;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#projectTwo {
+  grid-area: projectTwo;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#projectThree {
+  grid-area: projectThree;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#projectFour {
+  grid-area: projectFour;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#projectFive {
+  grid-area: projectFive;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+/* Mobile media query */
+
+@media only screen and (max-width: 600px) {
+ /* #headline {
+    position: static;
+    margin: 20px;
+  }
+  #heroGrid {
+    grid-template-areas:
+    "featuredProduct featuredProduct"
+    "secondaryProduct CTA";
+  }*/
+  #workGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "showcaseProject"
+      "projectTwo"
+      "projectThree"
+      "projectFour"
+      "projectFive"
+    ;
+  }

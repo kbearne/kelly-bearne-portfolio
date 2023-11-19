@@ -82,7 +82,7 @@ nav .mainHeading {
 
 #navItems {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   width: 75%;
 }
 
@@ -232,12 +232,14 @@ nav ul li a {
 footer {
   background-color: var(--darkgrey);;
   width: 100%;
+  margin-top: 10px;
 }
 
 #footerItems {
   display: flex;
   justify-content: space-evenly;
   margin: 0 auto;
+  height: 75px;
 }
 
 footer ul {
@@ -255,6 +257,26 @@ footer ul li {
 footer ul li a {
   text-decoration: none;
   color: var(--white);
+}
+
+.logo-github::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background: url("../images/github-mark-white.png") no-repeat center center;
+  background-size: contain;
+}
+
+.logo-linkedin::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background: url("../images/LI-In-Bug.png") no-repeat center center;
+  background-size: contain;
 }
 
 /* Mobile media queries */

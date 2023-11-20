@@ -1,8 +1,11 @@
 /* Global variables */
 :root {
-  --blue: #166795;
   --white: #FFFFFF;
-  --darkgrey: #333;
+  --darkgrey: #2E3138;
+  --medgrey: #6C6F7D;
+  --olive: #A5B452;
+  --medgreen: #C8D96F;
+  --lightgreen: #C4F7A1;
 }
 
 * {
@@ -12,31 +15,35 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Lucida Sans Unicode', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+}
+
+/* Link styling */
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--olive);
+}
+
+a:hover {
+  color: var(--lightgreen);
+  text-decoration: underline;
 }
 
 /* Typography */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
 h1 {
   font-size: 45px;
   margin: 0px 0px;
-  color: var(--white);
+  color: var(--olive);
 }
 
 h2 {
   font-size: 35px;
   margin: 0px 0px;
-  color: var(--blue);
+  color: var(--olive);
 }
 
 h3 {
@@ -45,10 +52,16 @@ h3 {
   margin: 0px 0px;
 }
 
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 .subHeading {
   text-align: center;
-  border-bottom: 2px solid black;
-  width: 300px;
+  border-bottom: 6px solid var(--medgrey);
+  width: 200px;
   margin: 20px auto;
 }
 
@@ -98,11 +111,6 @@ nav ul li {
   padding: 10px;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: var(--white);
-}
-
 /* Hero section */
 
 .hero-section {
@@ -123,8 +131,8 @@ nav ul li a {
 }
 
 #banner h2 {
-  background-color: var(--white);
-  color: var(--blue);
+  background-color: var(--darkgrey);
+  color: var(--olive);
   padding: 20px;
   display: inline-block;
 }
@@ -134,8 +142,8 @@ nav ul li a {
 #about {
   margin: 0px 5%;
   display: grid;
-  grid-template-rows: 200px;
-  grid-template-columns: 90% 10%;
+  grid-template-rows: auto;
+  grid-template-columns: 85% 15%;
   grid-template-areas:
   "aboutText profilePhoto";
 }
@@ -216,10 +224,10 @@ nav ul li a {
 
 #work .workGridArea .heading {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(0, 0, 0, 0.6);
   padding: 15px;
   height: auto;
-  color: black;
+  color: var(--olive);
   font-size: 18px;
   bottom: 0;
   left: 0;
@@ -254,11 +262,6 @@ footer ul li {
   padding: 10px;
 }
 
-footer ul li a {
-  text-decoration: none;
-  color: var(--white);
-}
-
 .logo-github::before {
   content: "";
   display: inline-block;
@@ -282,24 +285,50 @@ footer ul li a {
 /* Mobile media queries */
 
 @media only screen and (max-width: 600px) {
- /* #headline {
-    position: static;
-    margin: 20px;
-  }
-  #heroGrid {
-    grid-template-areas:
-    "featuredProduct featuredProduct"
-    "secondaryProduct CTA";
-  }*/
- #work {
-    grid-template-rows: 300px 300px 300px 300px 300px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "showcaseProject"
-      "projectTwo"
-      "projectThree"
-      "projectFour"
-      "projectFive"
-    ;
-  }
+
+/* Typography */
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+/* Hero section */
+
+.hero-section {
+  grid-template-rows: 150px;
+}
+
+/* About section */
+
+#about {
+  grid-template-areas:
+  "profilePhoto"
+  "aboutText"
+  ;
+}
+
+#profilePhoto {
+  /* center me */
+}
+
+/* Work section - stack projects ontop of eachother */
+#work {
+  grid-template-rows: 300px 300px 300px 300px 300px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "showcaseProject"
+    "projectTwo"
+    "projectThree"
+    "projectFour"
+    "projectFive"
+  ;
+}
 }

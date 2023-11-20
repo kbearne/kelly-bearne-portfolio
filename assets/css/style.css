@@ -20,14 +20,25 @@ body {
 }
 
 /* Link styling */
-
 a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--white);
+}
+
+ul a {
   text-decoration: none;
   font-weight: bold;
   color: var(--olive);
 }
 
-a:hover {
+ul a:visited {
+  color: var(--medgreen);
+}
+
+ul a:hover {
   color: var(--lightgreen);
   text-decoration: underline;
 }
@@ -123,7 +134,7 @@ nav ul li {
 
 #banner {
   grid-area: banner;
-  background-image: url("../images/02-hero-bg.jpg");
+  background-image: url("../images/projectFiveImg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -191,7 +202,6 @@ nav ul li {
   background-size: cover;
   background-repeat: no-repeat;
   margin: 5px;
-  cursor: pointer;
   display: grid;
   align-content: end;
   position: relative;
@@ -199,27 +209,27 @@ nav ul li {
 
 #showcaseProject {
   grid-area: showcaseProject;
-  background-image: url("../images/02-portfolio-1.jpg");
+  background-image: url("../images/projectTwoImg.jpg");
 }
 
 #projectTwo {
   grid-area: projectTwo;
-  background-image: url("../images/02-portfolio-2.jpg");
+  background-image: url("../images/projectOneImg.jpg");
 }
 
 #projectThree {
   grid-area: projectThree;
-  background-image: url("../images/02-portfolio-2.jpg");
+  background-image: url("../images/projectThreeImg.jpg");
 }
 
 #projectFour {
   grid-area: projectFour;
-  background-image: url("../images/02-portfolio-2.jpg");
+  background-image: url("../images/projectFourImg.jpg");
 }
 
 #projectFive {
   grid-area: projectFive;
-  background-image: url("../images/02-portfolio-2.jpg");
+  background-image: url("../images/projectFiveImg.jpg");
 }
 
 #work .workGridArea .heading {
@@ -227,7 +237,7 @@ nav ul li {
   background-color: rgb(0, 0, 0, 0.6);
   padding: 15px;
   height: auto;
-  color: var(--olive);
+  color: var(--white);
   font-size: 18px;
   bottom: 0;
   left: 0;

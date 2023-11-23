@@ -96,18 +96,12 @@ header {
 nav {
   display: flex;
   flex-direction: row;
-  margin: 0px 5%;
-}
-
-nav .mainHeading {
-  width: 25%;
-  font-weight: 500;
 }
 
 #navItems {
   display: flex;
-  justify-content: flex-end;
-  width: 75%;
+  width: 100%;
+  justify-content: center;
 }
 
 nav ul {
@@ -310,12 +304,6 @@ h3 {
   font-size: 20px;
 }
 
-/* Hero section */
-
-.hero-section {
-  grid-template-rows: 150px;
-}
-
 /* About section */
 
 #about {
@@ -323,6 +311,12 @@ h3 {
   "profilePhoto"
   "aboutText"
   ;
+}
+
+/* Hero section */
+
+.hero-section {
+  display: none;
 }
 
 #profilePhoto {

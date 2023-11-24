@@ -229,6 +229,15 @@ nav .icon {
   box-sizing: border-box;
 }
 
+#showcaseProjectURL {
+  position: absolute;
+  padding: 15px;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 /* Footer / Contact section */
 
 footer {

@@ -13,12 +13,17 @@
   box-sizing: border-box;
 }
 
+/* Root page elements styling */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Lucida Sans Unicode', 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
   background-color: var(--white);
+}
+
+p {
+  margin: 0;
 }
 
 /* Link styling */
@@ -36,7 +41,6 @@ ul a:hover {
 }
 
 /* Typography */
-
 h1 {
   font-size: 45px;
   margin: 0px 0px;
@@ -68,20 +72,15 @@ h6 {
   margin: 20px auto;
 }
 
-p {
-  margin: 0;
-}
-
-/* Page wrapper */
-
+/* Page wrapper styling*/
 .page-wrapper {
   width: 85%;
   margin: 0 auto;
   background-color: var(--white);
 }
 
-/* Style the links inside the navigation bar */
-
+/* Navigiation styling */
+/* The following tutorial was followed to create the reactive navigation: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 nav a {
   float: left;
   display: block;
@@ -105,23 +104,24 @@ nav .icon {
   display: none;
 }
 
-/* Hero section */
-
+/* Hero section styling*/
 .hero-section {
   display: flex;
   width: 100%;
 }
 
+/* The banner takes up flex: 1 (all available flex container space), the container image is set via CSS, the border-box includes 50px padding */
 #banner {
-  flex: 1; /* Allow #banner to take up remaining space in flex container */
+  flex: 1;
   background-image: url("../images/projectFiveImg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 50px;
-  box-sizing: border-box; /* Include padding in the total width */
+  box-sizing: border-box;
 }
 
+/* Displays a centered h2 title within the banner */
 #banner h2 {
   background-color: var(--white);
   color: var(--olive);
@@ -129,11 +129,11 @@ nav .icon {
   display: inline-block;
   text-align: center;
   max-width: 80%;
-  margin: 0 auto; /* Center the h2 within #banner */
+  margin: 0 auto;
 }
 
 /* About section */
-
+/* Utilises Grid and Flex positioning */
 #about {
   margin: 0px 5%;
   display: grid;
@@ -167,8 +167,8 @@ nav .icon {
   margin: 10px;
 }
 
-/* Work section */
-
+/* Work section styling */
+/* Utilises Grid positioning */
 #work {
   margin: 0px 5%;
   display: grid;
@@ -238,8 +238,8 @@ nav .icon {
   width: 100%;
 }
 
-/* Footer / Contact section */
-
+/* Footer / Contact section styling */
+/* Utilises Flex for positioning */
 footer {
   background-color: var(--darkgrey);
   width: 100%;
@@ -269,6 +269,8 @@ footer a {
   color: white;
 }
 
+/* Prefixes the GitHub logo to my GitHub link */
+/* Logo downloaded from: https://github.com/logos and utilised as per the provided guidelines */
 .logo-github::before {
   content: "";
   display: inline-block;
@@ -279,6 +281,8 @@ footer a {
   background-size: contain;
 }
 
+/* Prefixes the LinkedIn logo to my LinkedIn link */
+/* Logo downloaded from: https://brand.linkedin.com/downloads and utilised as per the provided guidelines */
 .logo-linkedin::before {
   content: "";
   display: inline-block;
@@ -289,12 +293,11 @@ footer a {
   background-size: contain;
 }
 
-/* Mobile media queries */
-
+/* Mobile media query - adds a breakpoint for a max width of 600px */
 @media only screen and (max-width: 600px) {
 
 /* Typography */
-
+/* Font sizes are reduced in the mobile view */
 h1 {
   font-size: 20px;
 }
@@ -307,13 +310,13 @@ h3 {
   font-size: 20px;
 }
 
-/* Nav section */
-
+/* Nav section styling */
+/* Styling for the reactive navigation; on a smaller screen the navigation collapses down into a burger menu for a more optimal mobile experience */
 nav {
   background-color: var(--black);
 }
 
-nav a:not(:first-child) {
+nav a {
   display: none;
 
 }
@@ -338,8 +341,8 @@ nav.responsive a {
   text-align: left;
 }
 
-/* About section */
-
+/* About section styling*/
+/* Utilises Grid to stack sections ontop of eachother for an optimal mobile experience */
 #about {
   grid-template-areas:
   "profilePhoto"
@@ -351,7 +354,8 @@ nav.responsive a {
   /* center me */
 }
 
-/* Work section - stack projects ontop of eachother */
+/* Work section styling */
+/* Utilises Grid to stack projects ontop of eachother for an optimal mobile experience */
 #work {
   grid-template-rows: 300px 300px 300px 300px 300px;
   grid-template-columns: 1fr;

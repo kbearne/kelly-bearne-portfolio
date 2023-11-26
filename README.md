@@ -26,7 +26,7 @@ This site is responsive to mobile, tablet and desktop breakpoints. It contains a
 
 ## Credits
 
-N/A
+The following tutorial was followed to create the reactive navigation: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp
 
 ## License
 

@@ -1,4 +1,4 @@
-/* Global variables */
+/* Global variables (colour) styling */
 :root {
   --white: #FFFFFF;
   --darkgrey: #2E3138;
@@ -9,11 +9,11 @@
   --black: #000000;
 }
 
+/* Root page elements styling */
 * {
   box-sizing: border-box;
 }
 
-/* Root page elements styling */
 body {
   margin: 0;
   padding: 0;
@@ -40,7 +40,7 @@ ul a:hover {
   text-decoration: none;
 }
 
-/* Typography */
+/* Typography styling */
 h1 {
   font-size: 45px;
   margin: 0px 0px;
@@ -132,7 +132,7 @@ nav .icon {
   margin: 0 auto;
 }
 
-/* About section */
+/* About section styling */
 /* Utilises Grid and Flex positioning */
 #about {
   margin: 0px 5%;
@@ -141,15 +141,6 @@ nav .icon {
   grid-template-columns: 85% 15%;
   grid-template-areas:
   "aboutText profilePhoto";
-}
-
-.aboutGridArea {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-items: center;
-  display: flex;
-  position: relative;
 }
 
 #aboutText {
@@ -193,12 +184,12 @@ nav .icon {
 
 #showcaseProject {
   grid-area: showcaseProject;
-  background-image: url("../images/projectTwoImg.jpg");
+  background-image: url("../images/HoriseonCodeRefactorProject.png");
 }
 
 #projectTwo {
   grid-area: projectTwo;
-  background-image: url("../images/projectOneImg.jpg");
+  background-image: url("../images/projectTwoImg.jpg");
 }
 
 #projectThree {
@@ -293,13 +284,86 @@ footer a {
   background-size: contain;
 }
 
-/* Mobile media query - adds a breakpoint for a max width of 600px */
+/* TABLET media query - adds a breakpoint for a min width of 600px and max width of 800px */
+@media only screen and (min-width: 600.1px) and (max-width: 850px) {
+
+/* Page wrapper styling*/
+.page-wrapper {
+  width: 95%;
+}
+
+/* Typography */
+/* Font sizes are reduced in the tablet view */
+h1 {
+  font-size: 40px;
+}
+  
+h2 {
+  font-size: 30px;
+}
+  
+h3 {
+  font-size: 20px;
+}
+  
+/* About section styling*/
+/* Utilises Grid to stack sections ontop of eachother for an optimal tablet experience */
+#about {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
+  grid-template-areas:
+  "profilePhoto"
+  "aboutText"
+  ;
+}
+
+#aboutText {
+  grid-area: aboutText;
+}
+
+#profilePhoto {
+  grid-area: profilePhoto;
+  background-image: url("../images/headshot2.jpg");
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  justify-self: center;
+  align-self: center; 
+}
+
+/* Work section styling */
+/* Utilises Grid to stack projects ontop of eachother for an optimal tablet experience */
+#work {
+  grid-template-rows: 300px 300px 300px 300px 300px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "showcaseProject"
+    "projectTwo"
+    "projectThree"
+    "projectFour"
+    "projectFive"
+  ;
+}
+  
+}
+
+/* MOBILE media query - adds a breakpoint for a max width of 600px */
 @media only screen and (max-width: 600px) {
+
+/* Page wrapper styling*/
+.page-wrapper {
+  width: 95%;
+}
 
 /* Typography */
 /* Font sizes are reduced in the mobile view */
 h1 {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 h2 {
@@ -344,14 +408,31 @@ nav.responsive a {
 /* About section styling*/
 /* Utilises Grid to stack sections ontop of eachother for an optimal mobile experience */
 #about {
+  margin: 0px 5%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 100%;
   grid-template-areas:
   "profilePhoto"
   "aboutText"
   ;
 }
 
+#aboutText {
+  grid-area: aboutText;
+}
+
 #profilePhoto {
-  /* center me */
+  grid-area: profilePhoto;
+  background-image: url("../images/headshot2.jpg");
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 10px;
+  justify-self: center;
+  align-self: center; 
 }
 
 /* Work section styling */

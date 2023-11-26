@@ -6,7 +6,7 @@ This project fullfils the criteria of building an effective portfolio to highlig
 
 The site is responsive to mobile, tablet and desktop breakpoints; achieved through the use of three media queries. Both CSS Grid and Flex are utilised in this project.
 
-The codebase follows best practice throughout (e.g. semantic HTML, class / ID naming conventions, indentation and quality comments).
+The codebase follows best practice throughout (e.g. semantic HTML, class / ID naming conventions, indentation, quality comments and CSS variables).
 
 ![Screenshot of the website](./assets/images/websiteScreenshot.png)
 
